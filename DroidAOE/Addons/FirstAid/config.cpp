@@ -158,7 +158,6 @@ class CfgSlots
 
 class CfgVehicles
 {
-	class aoe_firstaidkit;
 	class Container_Base;
 	class Inventory_Base;
 	class Edible_Base;
