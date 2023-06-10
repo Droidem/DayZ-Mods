@@ -1,0 +1,164 @@
+ImageSetClass {
+ Name "Continental_UI"
+ RefSize 2048 2048
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{504CCE07B586E6F8}ContinentalZ_UI/UI/Data_UI/Continental_UI.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass iconHealth0 {
+   Name "iconHealth0"
+   Pos 1738 489
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHealth1 {
+   Name "iconHealth1"
+   Pos 1738 801
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHealth2 {
+   Name "iconHealth2"
+   Pos 1737 1114
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHealth3 {
+   Name "iconHealth3"
+   Pos 1737 1425
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHealth4 {
+   Name "iconHealth4"
+   Pos 1738 1737
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconBlood0 {
+   Name "iconBlood0"
+   Pos 1425 489
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconBlood1 {
+   Name "iconBlood1"
+   Pos 1426 802
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconBlood2 {
+   Name "iconBlood2"
+   Pos 1426 1113
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconBlood3 {
+   Name "iconBlood3"
+   Pos 1426 1426
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconBlood4 {
+   Name "iconBlood4"
+   Pos 1425 1738
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHungry0 {
+   Name "iconHungry0"
+   Pos 802 489
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHungry1 {
+   Name "iconHungry1"
+   Pos 801 802
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHungry2 {
+   Name "iconHungry2"
+   Pos 801 1114
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHungry3 {
+   Name "iconHungry3"
+   Pos 801 1425
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconHungry4 {
+   Name "iconHungry4"
+   Pos 801 1737
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconThirsty0 {
+   Name "iconThirsty0"
+   Pos 1112 490
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconThirsty1 {
+   Name "iconThirsty1"
+   Pos 1113 802
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconThirsty2 {
+   Name "iconThirsty2"
+   Pos 1114 1114
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconThirsty3 {
+   Name "iconThirsty3"
+   Pos 1113 1426
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconThirsty4 {
+   Name "iconThirsty4"
+   Pos 1114 1737
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconTemperature0 {
+   Name "iconTemperature0"
+   Pos 490 489
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconTemperature1 {
+   Name "iconTemperature1"
+   Pos 490 801
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconTemperature2 {
+   Name "iconTemperature2"
+   Pos 490 1113
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconTemperature3 {
+   Name "iconTemperature3"
+   Pos 490 1425
+   Size 301 301
+   Flags 0
+  }
+  ImageSetDefClass iconTemperature4 {
+   Name "iconTemperature4"
+   Pos 489 1738
+   Size 301 301
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}
