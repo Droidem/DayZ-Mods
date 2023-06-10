@@ -1,11 +1,12 @@
 ////////////////////////////////////////////////////////////////////
 //HUGE HUGE HUGE THANK YOU TO THE FOLLOWING:
-// ZuluNiner's FirstAidPouch https://steamcommunity.com/sharedfiles/filedetails/?id=2854033629
+//ZuluNiner's FirstAidPouch https://steamcommunity.com/sharedfiles/filedetails/?id=2854033629
 //Sprugle's Vanilla Item Retexturing https://www.youtube.com/watch?v=nrc9lkFUu0M&list=PLm6NfdQ3NmL9OBmbN-tl99F70bvzm6u7M&index=7
 //Sprugle's Discord https://discord.gg/KuJZDvP
 //Josie Garfunkle's JosiesClotheZ https://steamcommunity.com/sharedfiles/filedetails/?id=2922243406
 //IceBlade's DrugsPlus https://steamcommunity.com/sharedfiles/filedetails/?id=2170927235
 //Bloderz's Retexture Video https://www.youtube.com/watch?v=BT_lqv-Qd7k
+//Scott Porter's Sample UI https://steamcommunity.com/sharedfiles/filedetails/?id=2969078370
 ////////////////////////////////////////////////////////////////////
 
 class CfgPatches
