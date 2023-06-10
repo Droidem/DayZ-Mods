@@ -48,7 +48,7 @@ class CfgMods
 				value="";
 				files[]=
 				{
-					"scripts/4_world"
+					"FirstAid/scripts/4_world"
 				};
 			};
 			class imageSets
@@ -176,13 +176,11 @@ class CfgVehicles
 			};
 		};
 	};
-	class aoe_firstaidkit: Container_Base
+	class FirstAidKit: Container_Base
 	{
 		scope=1;
 		itemsCargoSize[]={0,0};
 		itemSize[]={3,3};
-		rotationFlags=17;
-		model="dz/gear/containers/FirstAidKit.p3d";
 		attachments[]=
 		{
 			"MedicalBandage0",
@@ -210,12 +208,10 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"FirstAid/data/aoe_first_aid_kit.paa",
-			"FirstAid/data/aoe_first_aid_kit.paa",
-			"FirstAid/data/aoe_first_aid_kit.paa"
+			"DZ/gear/containers/data/firstaidkit_co.paa",
 		};
 	};
-	class Fed_FAK: aoe_firstaidkit 
+	class Fed_FAK: FirstAidKit
 	{
 		scope = 2;
 		displayName = "Federation First Aid Kit";
@@ -228,61 +224,8 @@ class CfgVehicles
 		{
 			"FirstAid/data/firstaidkit_fed_co.paa"
 		};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=300;
-					healthLevels[]=
-					{
-						
-						{
-							1,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit.rvmat"
-							}
-						},
-						
-						{
-							0.69999999,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit.rvmat"
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_damage.rvmat"
-							}
-						},
-						
-						{
-							0.30000001,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_damage.rvmat"
-							}
-						},
-						
-						{
-							0,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_destruct.rvmat"
-							}
-						}
-					};
-				};
-			};
-		};
 	};
-	class Zod_FAK: aoe_firstaidkit 
+	class Zod_FAK: firstaidkit 
 	{
 		scope = 2;
 		displayName = "Z.O.D. First Aid Kit";
@@ -294,64 +237,9 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = 
 		{
 			"FirstAid/data/firstaidkit_zod_co.paa",
-			"FirstAid/data/firstaidkit_zod_co.paa",
-			"FirstAid/data/firstaidkit_zod_co.paa"
 		}; 
-				class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=30;
-					healthLevels[]=
-					{
-						
-						{
-							1,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit.rvmat"
-							}
-						},
-						
-						{
-							0.69999999,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit.rvmat"
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_damage.rvmat"
-							}
-						},
-						
-						{
-							0.30000001,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_damage.rvmat"
-							}
-						},
-						
-						{
-							0,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_destruct.rvmat"
-							}
-						}
-					};
-				};
-			};
-		};
 	};
-	class AOE_FAK: aoe_firstaidkit 
+	class AOE_FAK: firstaidkit 
 	{
 		scope = 2;
 		displayName = "AOE First Aid Kit";
@@ -363,62 +251,8 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = 
 		{
 			"FirstAid/data/firstaidkit_aoe_co.paa",
-			"FirstAid/data/firstaidkit_aoe_co.paa",
-			"FirstAid/data/firstaidkit_aoe_co.paa"
 		};
-				class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=30;
-					healthLevels[]=
-					{
-						
-						{
-							1,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit.rvmat"
-							}
-						},
-						
-						{
-							0.69999999,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit.rvmat"
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_damage.rvmat"
-							}
-						},
-						
-						{
-							0.30000001,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_damage.rvmat"
-							}
-						},
-						
-						{
-							0,
-							
-							{
-								"FirstAid/data/aoe_firstaidkit_destruct.rvmat"
-							}
-						}
-					};
-				};
-			};
-		};
+
 	};	
 	class BandageDressing: Inventory_Base
 	{
