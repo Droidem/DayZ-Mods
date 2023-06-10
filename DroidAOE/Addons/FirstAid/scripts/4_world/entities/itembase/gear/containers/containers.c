@@ -1,4 +1,4 @@
-class AOE_FirstAidKit extends Container_Base
+class aoe_firstaidkit extends Container_Base
 {
     override bool CanReceiveItemIntoCargo( EntityAI item )
     {

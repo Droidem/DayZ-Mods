@@ -1,11 +1,11 @@
-class Fed_FAK : FirstAidKit
+class Fed_FAK : aoe_firstaidkit
 {
 };
 
-class Zod_FAK : FirstAidKit
+class Zod_FAK : aoe_firstaidkit
 {
 };
 
-class AOE_FAK : FirstAidKit
+class AOE_FAK : aoe_firstaidkit
 {
 };
