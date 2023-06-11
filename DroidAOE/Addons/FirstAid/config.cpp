@@ -157,6 +157,7 @@ class CfgVehicles
 	class tactical_pouch_base;
 	class AoE_FirstAid_base: tactical_pouch_base
 	{
+		scope = 1;
 		descriptionShort = "A modified first aid kit.";
 		itemsCargoSize[]={0,0};
 		attachments[]=
@@ -196,8 +197,6 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"FirstAid\data\firstaidkit_fed_co.paa",
-			"FirstAid\data\firstaidkit_fed_co.paa",
 			"FirstAid\data\firstaidkit_fed_co.paa"
 		};
 	};
@@ -212,8 +211,6 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"FirstAid\data\firstaidkit_zod_co.paa",
-			"FirstAid\data\firstaidkit_zod_co.paa",
 			"FirstAid\data\firstaidkit_zod_co.paa"
 		}; 
 	};
@@ -228,8 +225,6 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"FirstAid\data\firstaidkit_aoe_co.paa",
-			"FirstAid\data\firstaidkit_aoe_co.paa",
 			"FirstAid\data\firstaidkit_aoe_co.paa"
 		};
 	};
