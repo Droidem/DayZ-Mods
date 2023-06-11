@@ -6,22 +6,26 @@
 //Josie Garfunkle's JosiesClotheZ https://steamcommunity.com/sharedfiles/filedetails/?id=2922243406
 //IceBlade's DrugsPlus https://steamcommunity.com/sharedfiles/filedetails/?id=2170927235
 //Bloderz's Retexture Video https://www.youtube.com/watch?v=BT_lqv-Qd7k
+//HUGE HUGE HUGE HUGE HUGE shout out to TwoTitsPlaytat on Discord. They FIXED MY ISSUE!!!!
 ////////////////////////////////////////////////////////////////////
 
 class CfgPatches
 {
-   class FirstAid
+   class AoE_FirstAid
 	{
-		units[]={};
+		units[]=
+		{
+			"AOE_FAK",
+			"Zod_FAK",
+			"Fed_FAK"
+		};
 		weapons[]={};
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
 			"DZ_Characters",
-			"DZ_Characters_tops",
 			"DZ_Data",
 			"DZ_Gear_Medical",
-			"DZ_Gear_Containers",
 			"DZ_Gear_Consumables",
 			"JPC_Vest",
 			"DZ_Scripts",
@@ -31,35 +35,12 @@ class CfgPatches
 };
 class CfgMods
 {
-	class FirstAid
+	class AoE_FirstAid
 	{
 		type="mod";
 		dir="FirstAid";
 		name="AoE's First Aid Kit";
 		author="Droidem";
-		dependencies[]=
-		{
-			"World"
-		};
-		class defs
-		{
-			class worldScriptModule
-			{
-				value="";
-				files[]=
-				{
-					"FirstAid/scripts/4_world"
-				};
-			};
-			class imageSets
-			{
-				files[]=
-				{
-					"JPC_Vest/gui/imagesets/jpc_icons.imageset",
-					"FirstAid/gui/imagesets/SampleUI.imageset"
-				};
-			};
-		};
 	};
 };
 class CfgSlots
@@ -152,15 +133,11 @@ class CfgSlots
 	{
 		name="FirstAidPouch";
 		displayName="AOE First Aid Kit";
-		ghostIcon="set:jpc_icons image:medpouch";
+		ghostIcon="set:jpc_icons image:tacticalpouch";
 	};
 };
-
 class CfgVehicles
 {
-	class Container_Base;
-	class Inventory_Base;
-	class Edible_Base;
 	class Man;
 	class SurvivorBase: Man
 	{
@@ -170,17 +147,18 @@ class CfgVehicles
 		};
 		class InventoryEquipment
 		{
-			playerSlots[]+=
+		playerSlots[]+=
 			{
 				"Slot_FirstAidPouch"
 			};
 		};
 	};
-	class FirstAidKit: Container_Base
+	class Container_Base;
+	class tactical_pouch_base;
+	class AoE_FirstAid_base: tactical_pouch_base
 	{
-		scope=1;
+		descriptionShort = "A modified first aid kit.";
 		itemsCargoSize[]={0,0};
-		itemSize[]={3,3};
 		attachments[]=
 		{
 			"MedicalBandage0",
@@ -204,56 +182,59 @@ class CfgVehicles
 		};
 		hiddenSelections[]=
 		{
-			"zbytek"
-		};
-		hiddenSelectionsTextures[] = 
-		{
-			"DZ/gear/containers/data/firstaidkit_co.paa",
+			"camo"
 		};
 	};
-	class Fed_FAK: FirstAidKit
+	class Fed_FAK: AoE_FirstAid_base
 	{
 		scope = 2;
 		displayName = "Federation First Aid Kit";
 		descriptionShort = "A modified first aid kit with the Federation Emblem on it.";
 		hiddenSelections[]=
 		{
-			"zbytek"
+			"camo"
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"FirstAid/data/firstaidkit_fed_co.paa"
+			"FirstAid\data\firstaidkit_fed_co.paa",
+			"FirstAid\data\firstaidkit_fed_co.paa",
+			"FirstAid\data\firstaidkit_fed_co.paa"
 		};
 	};
-	class Zod_FAK: firstaidkit 
+	class Zod_FAK: AoE_FirstAid_base 
 	{
 		scope = 2;
 		displayName = "Z.O.D. First Aid Kit";
 		descriptionShort = "A modified first aid kit with the Z.O.D. Emblem on it.";
 		hiddenSelections[]=
 		{
-			"zbytek"
+			"camo"
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"FirstAid/data/firstaidkit_zod_co.paa",
+			"FirstAid\data\firstaidkit_zod_co.paa",
+			"FirstAid\data\firstaidkit_zod_co.paa",
+			"FirstAid\data\firstaidkit_zod_co.paa"
 		}; 
 	};
-	class AOE_FAK: firstaidkit 
+	class AOE_FAK: AoE_FirstAid_base 
 	{
 		scope = 2;
 		displayName = "AOE First Aid Kit";
 		descriptionShort = "A modified first aid kit.";
 		hiddenSelections[]=
 		{
-			"zbytek"
+			"camo"
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"FirstAid/data/firstaidkit_aoe_co.paa",
+			"FirstAid\data\firstaidkit_aoe_co.paa",
+			"FirstAid\data\firstaidkit_aoe_co.paa",
+			"FirstAid\data\firstaidkit_aoe_co.paa"
 		};
-
-	};	
+	};
+	class Inventory_Base;
+	class Edible_Base;
 	class BandageDressing: Inventory_Base
 	{
 		inventorySlot[]+=
@@ -333,7 +314,7 @@ class CfgVehicles
 			"MedicalBloodBag"
 		};
 	};
-		class BloodBagEmpty: Inventory_Base
+	class BloodBagEmpty: Inventory_Base
 	{
 		inventorySlot[]+=
 		{
@@ -356,25 +337,25 @@ class CfgVehicles
 			"MedicalVitamins"
 		};
 	};
-   class AMS_Ai2: Inventory_Base 
-   {
+   	class AMS_Ai2: Inventory_Base 
+   	{
 		inventorySlot[] += 
 		{
 			"AMS_Ai2"
 		};
-   };
-   class Splint: Inventory_Base 
-   {
-     inventorySlot[] += 
+  	};
+   	class Splint: Inventory_Base 
+   	{
+     	inventorySlot[] += 
 		{
 			"Splint"
 		};
-   };
-      class AMS_Splint: Inventory_Base 
-   {
-     inventorySlot[] += 
+   	};
+   	class AMS_Splint: Inventory_Base 
+   	{
+     	inventorySlot[] += 
 		{
 			"Splint"
 		};
-   };
- };
+	};
+};
