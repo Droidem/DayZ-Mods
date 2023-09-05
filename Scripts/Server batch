@@ -1,0 +1,21 @@
+@echo off
+:start
+:: Server Port
+set serverPort=2302
+:: Server config
+set serverConfig=F:\SteamLibrary\steamapps\common\DayZServer\AoEserverDZ.cfg
+:: Server profile folder
+set serverProfile=F:\SteamLibrary\steamapps\common\DayZServer\10Config
+:: Logical CPU cores to use (Equal or less than available)
+set serverCPU=4
+
+:: Mods (List your mod folders here, separated by semicolons)
+set "modList=@CF;@Dabs Framework;@DayZ-Expansion-Core;@VPPNotifications;@VPPAdminTools;@GameLabs;@DayZ-Expansion-AI;@DayZ-Expansion-Licensed;@DayZ-Expansion;@DayZ-Expansion-Animations;@DayZ Editor Loader;@DayZ-Expansion-Vehicles;@BaseBuildingPlus;@JD's Jungle Chernarus;@CJ187-HighGrass;@BuilderItems;@BuildingsMegaModPack;@BuildingsModPack5;@VanillaRoadPartsPack;@Megaloot Tunnels;@Admirals Diving Mod;@Billboards_53;@Bad_Food;@DayZ Mining System with Ores and Gems;@Chernobyl Zone Building;@DroidAOE;@Adamx Storage;@AoE Expanded - JaF;@Breachingcharge;@Breachingcharge Codelock Compatibility;@Better Inspect;@Breachingcharge with Notifications;@TraderPlus;@Keep it dead - ProjectBR;@Code Lock;@Drippy Sneakers;@Dogtags;@DrugsPLUS;@DNA Keycards;@CannabisPlus;@[CrSk] BMW 525i E34;@AdditionalMedicSupplies;@RedFalcon Watercraft;@MMG - Mightys Military Gear;@PvZmoD_CustomisableZombies;@Flying Birds;@RUSForma_vehicles;@Towing Service;@SkyFall;@DayZ-Rat;@CJ187-ImmersiveAnimals;@MMG Civilian Clothing;@Drones;@DHGS Hunting;@SNAFU Weapons;@Eat An Iztek"
+
+:: Sets title for terminal (DON'T edit)
+title DayZ Server batch
+:: Change to the DayZ Server directory
+cd /d "F:\SteamLibrary\steamapps\common\DayZServer"
+:: Start the server
+echo (%time%) DayZ Server started.
+start "DayZ Server" DayZServer_x64.exe -config=%serverConfig% "-mod=%modList%" -port=%serverPort% -profiles=%serverProfile% -dologs -netlog -freezecheck
