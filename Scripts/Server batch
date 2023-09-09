@@ -1,21 +1,31 @@
 @echo off
-:start
+setlocal
+
+:: Name for CMD window
+set "serverName=My DayZ Server"
+:: Server files location
+set "serverLocation=D:\SteamLibrary\steamapps\common\DayZServer"
 :: Server Port
-set serverPort=2302
+set "serverPort=2302"
 :: Server config
-set serverConfig=F:\SteamLibrary\steamapps\common\DayZServer\AoEserverDZ.cfg
+set "serverConfig=D:\SteamLibrary\steamapps\common\DayZServer\AoEserverDZ.cfg"
 :: Server profile folder
-set serverProfile=F:\SteamLibrary\steamapps\common\DayZServer\10Config
+set "serverProfile=D:\SteamLibrary\steamapps\common\DayZServer\10Config"
 :: Logical CPU cores to use (Equal or less than available)
-set serverCPU=4
+set "serverCPU=4"
 
 :: Mods (List your mod folders here, separated by semicolons)
-set "modList=@CF;@Dabs Framework;@DayZ-Expansion-Core;@VPPNotifications;@VPPAdminTools;@GameLabs;@DayZ-Expansion-AI;@DayZ-Expansion-Licensed;@DayZ-Expansion;@DayZ-Expansion-Animations;@DayZ Editor Loader;@DayZ-Expansion-Vehicles;@BaseBuildingPlus;@JD's Jungle Chernarus;@CJ187-HighGrass;@BuilderItems;@BuildingsMegaModPack;@BuildingsModPack5;@VanillaRoadPartsPack;@Megaloot Tunnels;@Admirals Diving Mod;@Billboards_53;@Bad_Food;@DayZ Mining System with Ores and Gems;@Chernobyl Zone Building;@DroidAOE;@Adamx Storage;@AoE Expanded - JaF;@Breachingcharge;@Breachingcharge Codelock Compatibility;@Better Inspect;@Breachingcharge with Notifications;@TraderPlus;@Keep it dead - ProjectBR;@Code Lock;@Drippy Sneakers;@Dogtags;@DrugsPLUS;@DNA Keycards;@CannabisPlus;@[CrSk] BMW 525i E34;@AdditionalMedicSupplies;@RedFalcon Watercraft;@MMG - Mightys Military Gear;@PvZmoD_CustomisableZombies;@Flying Birds;@RUSForma_vehicles;@Towing Service;@SkyFall;@DayZ-Rat;@CJ187-ImmersiveAnimals;@MMG Civilian Clothing;@Drones;@DHGS Hunting;@SNAFU Weapons;@Eat An Iztek"
+set mod=D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@CF;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Dabs Framework;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ-Expansion-Core;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@VPPNotifications;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@VPPAdminTools;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ-Expansion-AI;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ-Expansion-Licensed;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ-Expansion;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ-Expansion-Animations;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ Editor Loader;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ-Expansion-Vehicles;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@BaseBuildingPlus;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@JD's Jungle Chernarus;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@CJ187-HighGrass;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@BuilderItems;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@BuildingsMegaModPack;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@BuildingsModPack5;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@VanillaRoadPartsPack;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Megaloot Tunnels;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Admirals Diving Mod;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Billboards_53;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Bad_Food;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ Mining System with Ores and Gems;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Chernobyl Zone Building;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DroidAOE;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Adamx Storage;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@AoE Expanded - JaF;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Breachingcharge;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Breachingcharge Codelock Compatibility;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Better Inspect;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Breachingcharge with Notifications;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@TraderPlus;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Keep it dead - ProjectBR;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Code Lock;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Drippy Sneakers;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Dogtags;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DrugsPLUS;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DNA Keycards;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@CannabisPlus;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@[CrSk] BMW 525i E34;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@AdditionalMedicSupplies;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@RedFalcon Watercraft;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@MMG - Mightys Military Gear;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@PvZmoD_CustomisableZombies;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Flying Birds!;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@RUSForma_vehicles;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Towing Service;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@SkyFall;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DayZ-Rat;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@CJ187-ImmersiveAnimals;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@MMG Civilian Clothing;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Drones;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@DHGS Hunting;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@SNAFU Weapons;D:\SteamLibrary\steamapps\common\DayZ\!Workshop\@Eat An Iztek
 
-:: Sets title for terminal (DON'T edit)
-title DayZ Server batch
-:: Change to the DayZ Server directory
-cd /d "F:\SteamLibrary\steamapps\common\DayZServer"
+:: Sets title for terminal
+title %serverName% batch
+:: DayZServer location
+cd /d "%serverLocation%"
+:: Makes the profile directory if it doesn't already exist
+if not exist "%serverProfile%" (
+    mkdir "%serverProfile%" > nul
+)
 :: Start the server
-echo (%time%) DayZ Server started.
-start "DayZ Server" DayZServer_x64.exe -config=%serverConfig% "-mod=%modList%" -port=%serverPort% -profiles=%serverProfile% -dologs -netlog -freezecheck
+echo (%time%) %serverName% started.
+:: Launch parameters (edit end: -config=|-port=|-profiles=|-doLogs|-adminLog|-netLog|-freezeCheck|-filePatching|-BEpath=|-cpuCount= )
+start "DayZ Server" DayZServer_x64.exe -config=%serverConfig% -port=%serverPort% -profiles=%serverProfile% "-mod=%mod%" -cpuCount=%serverCPU% -dologs -adminlog -netlog -freezecheck
